@@ -1,0 +1,68 @@
+body{
+	height: 100vh;
+	background-color: rgb(213, 228, 213);
+}
+
+#find-recipes {
+	width: 20vw;
+	height: 2.13em;
+	font-size: 1.4em;
+	margin-left:0.5em ;
+	
+}
+
+#put-ingredient {
+	width: 75vw;
+	height: 2.80em;
+	font-size: 15px;
+	
+	
+}
+
+#recipes-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	gap: 2em;
+	margin: 2em;
+}
+
+.img{
+	width: 10em;
+	height: auto;
+	border-radius: 1.4em;
+}
+
+.container{
+	display: grid;
+	justify-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(262, 228, 170);
+
+}
+
+.img-container{
+	margin-top: 3em;
+}
+
+.main-link{
+	margin-top: 0.5em;
+	display: grid;
+	justify-items: center;
+}
+.link{
+	text-decoration: none;
+	color: #444;
+	font-size: 1.4em;
+}
+
+.guide-for-client{
+	font-size: 1.2em;
+}
+
+#input-container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+

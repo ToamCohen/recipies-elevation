@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="input-container">
+			<div id="main-input-container" >
+				<input type="text" id="put-ingredient" placeholder="Ingredients" />
+			</div>
+			<div id="main-button-container" >
+			<button id="find-recipes">Find-Recipes</button>
+		</div>
+		</div>
+		<div id="recipes-container"></div>
+
+		<!-- =============<handlebars>============== -->
+		<script id="recipes-template" type="text/x-handlebars-template">
+			{{#each data}}
+				<div class="container">
+					<header class="main-header">
+						<h1 class="header">
+							{{title}}
+						</h1>
+					</header>
+					<div class="img-container">
+						<img class="img" src="{{thumbnail}}" alt="" />
+					</div>
+					<div class="ingerdients-container">
+						<select class="main-ingerdinets">
+							{{#each ingredients}}
+								<option value="{{this}}" class="ingredients">
+									{{this}}
+								</option>
+							{{/each}}
+						</select>
+					</div>
+					<div class="guide-for-client">
+						click for video:
+					</div>
+					<nav class="main-link">
+						<a class="link" href="{{href}}">
+							{{title}}
+						</a>
+					</nav>
+				</div>
+			{{/each}}
+		</script>
+
+		<!-- ======================================= -->
+
+		<!-- ===============<scripts>================= -->
+		<script src="/jquery/dist/jquery.js"></script>
+		<script src="/handlebars/dist/handlebars.js"></script>
+		<script src="Renderer.js"></script>
+		<script src="main.js"></script>
+		<!-- ========================================= -->
+	</body>
+</html>
